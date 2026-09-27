@@ -22,10 +22,16 @@ function WalletPage() {
       try {
         const userId = '8ae50825-8618-46ff-80c3-b7398c5962cb'
 
-        const userData = await getUser(userId)
-        const withdrawalsData = await getWithdrawals(userId)
+        const userData = await getUser(
+  '8ae50825-8618-46ff-80c3-b7398c5962cb'
+)
 
-        setUser(userData)
+setUser(userData)
+
+        const withdrawalsData = await getWithdrawals(
+  '8ae50825-8618-46ff-80c3-b7398c5962cb'
+)
+
         setWithdrawals(withdrawalsData || [])
       } catch (err) {
         console.error(err)
