@@ -4,7 +4,7 @@ import { AppShell } from '@/components/AppShell'
 import { GlassCard, SectionTitle, StatusPill } from '@/components/ui'
 import { formatAmount, earningsSourceBreakdown } from '@/lib/fixtures'
 import { getUser, getWithdrawals } from '@/lib/queries'
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react' .
 
 export const Route = createFileRoute('/wallet')({
   component: WalletPage,
