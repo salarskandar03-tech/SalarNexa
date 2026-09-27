@@ -50,4 +50,4 @@ See `AGENTS.md` for a full directory breakdown and conventions.
 
 This milestone delivers the complete, polished UI on stubbed data (see `src/lib/fixtures.ts`). `PLAN.md`
 describes the remaining milestones — persistence, Telegram authentication, ad-network integration, and
-withdrawal processing — needed to turn this into a fully operational product...
+withdrawal processing — needed to turn this into a fully operational product.
