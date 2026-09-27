@@ -1,2 +1,10 @@
-# SalarNexa
-SalarNexa Digital Advertising Platform
+<!DOCTYPE html>
+<html>
+<head>
+<title>SalarNexa</title>
+</head>
+<body>
+<h1>💎 SalarNexa</h1>
+<p>The Future of Digital Advertising</p>
+</body>
+</html>
