@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { Wallet, TrendingUp, Users, Eye, ChevronLeft, ArrowDownLeft, ArrowUpRight, Gift, Send } from 'lucide-react'
+import { Wallet, Users, Eye, ChevronLeft, ArrowDownLeft, ArrowUpRight, Gift, Send } from 'lucide-react'
 import { AppShell } from '@/components/AppShell'
 import { GlassCard, SectionTitle, StatTile } from '@/components/ui'
 import { formatAmount, type ActivityItem } from '@/lib/fixtures'
@@ -66,10 +66,7 @@ function Home() {
             درخواست برداشت
           </Link>
 
-          <Link
-            to="/wallet"
-            className="sl-navy-btn rounded-xl py-2.5 text-center text-[13px] font-bold text-[#f0ead9]"
-          >
+          <Link to="/wallet" className="sl-navy-btn rounded-xl py-2.5 text-center text-[13px] font-bold text-[#f0ead9]">
             مشاهده کیف پول
           </Link>
         </div>
