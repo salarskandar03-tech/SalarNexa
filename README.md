@@ -1,4 +1,4 @@
-# SALAR 07
+ح# SALAR 07
 
 A premium Telegram Mini App for **SALAR 07**, a digital advertising and marketing company. The app gives
 members a Persian (Dari), right-to-left dashboard to track ad-viewing earnings, grow their referral network,
@@ -50,4 +50,4 @@ See `AGENTS.md` for a full directory breakdown and conventions.
 
 This milestone delivers the complete, polished UI on stubbed data (see `src/lib/fixtures.ts`). `PLAN.md`
 describes the remaining milestones — persistence, Telegram authentication, ad-network integration, and
-withdrawal processing — needed to turn this into a fully operational product.
+withdrawal processing — needed to turn this into a fully operational product...
