@@ -34,14 +34,14 @@ function WalletPage() {
   }, [])
 
   if (!user) {
-    return (
-      <AppShell title="کیف پول" back backTo="/">
-        <p className="text-[#f6f2e8] p-5">
-          در حال بارگذاری...
-        </p>
-      </AppShell>
-    )
-  }
+  return (
+    <AppShell title="کیف پول" back backTo="/">
+      <p className="text-red-500 p-5">
+        User not found
+      </p>
+    </AppShell>
+  )
+}
 
   const totalPct = earningsSourceBreakdown.data.reduce(
     (a, b) => a + b,
