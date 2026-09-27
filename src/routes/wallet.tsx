@@ -13,40 +13,53 @@ export const Route = createFileRoute('/wallet')({
 const sourceIcons = [Eye, Users, Gift]
 
 function WalletPage() {
-  const [user, setUser] = useState<any>(null)
+  const [user, setUser] = useState<any | null>(null)
   const [withdrawals, setWithdrawals] = useState<any[]>([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const loadData = async () => {
-      const userData = await getUser(
-        '8ae50825-8618-46ff-80c3-b7398c5962cb'
-      )
+      try {
+        const userId = '8ae50825-8618-46ff-80c3-b7398c5962cb'
 
-      const withdrawalsData = await getWithdrawals(
-        '8ae50825-8618-46ff-80c3-b7398c5962cb'
-      )
+        const userData = await getUser(userId)
+        const withdrawalsData = await getWithdrawals(userId)
 
-      setUser(userData)
-      setWithdrawals(withdrawalsData)
+        setUser(userData)
+        setWithdrawals(withdrawalsData || [])
+      } catch (err) {
+        console.error(err)
+      } finally {
+        setLoading(false)
+      }
     }
 
     loadData()
   }, [])
 
+  if (loading) {
+    return (
+      <AppShell title="کیف پول" back backTo="/">
+        <p className="p-5 text-center">در حال بارگذاری...</p>
+      </AppShell>
+    )
+  }
+
   if (!user) {
-  return (
-    <AppShell title="کیف پول" back backTo="/">
-      <p className="text-red-500 p-5">
-        User not found
-      </p>
-    </AppShell>
-  )
-}
+    return (
+      <AppShell title="کیف پول" back backTo="/">
+        <p className="text-red-500 p-5 text-center">
+          User not found
+        </p>
+      </AppShell>
+    )
+  }
 
   const totalPct = earningsSourceBreakdown.data.reduce(
     (a, b) => a + b,
     0
   )
+
   return (
     <AppShell title="کیف پول" back backTo="/">
       <GlassCard gold className="mt-2 p-5 sl-rise">
@@ -85,9 +98,7 @@ function WalletPage() {
         </Link>
       </GlassCard>
 
-      <SectionTitle>
-        منابع درآمد
-      </SectionTitle>
+      <SectionTitle>منابع درآمد</SectionTitle>
 
       <GlassCard className="p-4">
         {earningsSourceBreakdown.labels.map((label, i) => {
@@ -137,27 +148,36 @@ function WalletPage() {
       </SectionTitle>
 
       <GlassCard className="divide-y divide-white/[0.06]">
-        {withdrawals.map((w) => (
-          <div
-            key={w.id}
-            className="flex items-center justify-between p-4"
-          >
-            <div>
-              <p
-                className="text-[13.5px] font-semibold text-[#f0ead9] text-right"
-                dir="ltr"
-              >
-                {formatAmount(w.amount)}
-              </p>
-
-              <p className="text-[11.5px] text-[color:var(--sl-ink-muted)]">
-                {w.method} · {new Date(w.created_at).toLocaleDateString('fa-IR')}
-              </p>
-            </div>
-
-            <StatusPill status={w.status} />
+        {withdrawals.length === 0 ? (
+          <div className="p-4 text-center text-[color:var(--sl-ink-muted)]">
+            هنوز درخواست برداشتی ثبت نشده است
           </div>
-        ))}
+        ) : (
+          withdrawals.map((w) => (
+            <div
+              key={w.id}
+              className="flex items-center justify-between p-4"
+            >
+              <div>
+                <p
+                  className="text-[13.5px] font-semibold text-[#f0ead9] text-right"
+                  dir="ltr"
+                >
+                  {formatAmount(w.amount)}
+                </p>
+
+                <p className="text-[11.5px] text-[color:var(--sl-ink-muted)]">
+                  {w.method} ·{' '}
+                  {w.created_at
+                    ? new Date(w.created_at).toLocaleDateString('fa-IR')
+                    : '-'}
+                </p>
+              </div>
+
+              <StatusPill status={w.status} />
+            </div>
+          ))
+        )}
       </GlassCard>
     </AppShell>
   )
