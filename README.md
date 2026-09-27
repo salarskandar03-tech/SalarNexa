@@ -1,4 +1,4 @@
-ح# SALAR 07
+# SALAR 07
 
 A premium Telegram Mini App for **SALAR 07**, a digital advertising and marketing company. The app gives
 members a Persian (Dari), right-to-left dashboard to track ad-viewing earnings, grow their referral network,
