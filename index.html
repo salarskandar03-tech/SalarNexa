@@ -1,10 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SalarNexa</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+padding:20px;
+}
+
+.logo{
+text-align:center;
+margin-top:20px;
+}
+
+.logo h1{
+font-size:32px;
+}
+
+.logo p{
+color:#94a3b8;
+margin-top:8px;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:16px;
+margin-top:20px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-top:20px;
+}
+
+.stat{
+background:#334155;
+padding:15px;
+border-radius:12px;
+text-align:center;
+}
+
+.button{
+display:block;
+width:100%;
+background:#06b6d4;
+color:white;
+text-decoration:none;
+text-align:center;
+padding:15px;
+border-radius:12px;
+margin-top:20px;
+font-weight:bold;
+}
+
+.bottom{
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+background:#1e293b;
+display:flex;
+justify-content:space-around;
+padding:15px;
+}
+
+.bottom div{
+text-align:center;
+font-size:14px;
+}
+</style>
 </head>
+
 <body>
+
+<div class="logo">
 <h1>💎 SalarNexa</h1>
 <p>The Future of Digital Advertising</p>
+</div>
+
+<div class="card">
+<h2>Welcome Back</h2>
+<p>Professional Digital Advertising Platform</p>
+
+<div class="stats">
+
+<div class="stat">
+<h3>0</h3>
+<p>Referrals</p>
+</div>
+
+<div class="stat">
+<h3>$0.00</h3>
+<p>Earnings</p>
+</div>
+
+</div>
+
+<a href="#" class="button">
+🚀 Start Growing
+</a>
+</div>
+
+<div class="bottom">
+<div>🏠 Home</div>
+<div>👥 Referral</div>
+<div>💰 Earnings</div>
+<div>👤 Profile</div>
+</div>
+
 </body>
 </html>
