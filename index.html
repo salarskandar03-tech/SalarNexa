@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SalarNexa</title>
+<title>SALARNEXA</title>
 
 <style>
 
@@ -11,11 +11,11 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:Segoe UI,Arial,sans-serif;
 }
 
 body{
-background:linear-gradient(180deg,#050816,#0f172a);
+background:linear-gradient(180deg,#050816,#0a1023,#111827);
 color:white;
 padding-bottom:90px;
 }
@@ -24,7 +24,7 @@ padding-bottom:90px;
 padding:25px;
 }
 
-.logo-box{
+.brand{
 display:flex;
 align-items:center;
 gap:15px;
@@ -34,89 +34,106 @@ gap:15px;
 width:65px;
 height:65px;
 border-radius:20px;
-background:linear-gradient(135deg,#2563eb,#7c3aed);
+background:linear-gradient(135deg,#fbbf24,#f59e0b,#ffd700);
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:26px;
+font-size:24px;
 font-weight:bold;
-box-shadow:0 0 30px rgba(99,102,241,.5);
+color:#111;
+box-shadow:0 0 35px rgba(255,215,0,.4);
 }
 
-.header h1{
-font-size:30px;
-font-weight:700;
+.brand h1{
+font-size:28px;
+font-weight:800;
+letter-spacing:1px;
 }
 
-.header p{
+.brand p{
 color:#94a3b8;
-margin-top:4px;
+font-size:13px;
+margin-top:3px;
 }
 
-.page{
-padding:20px;
-}
-
-.card{
-background:rgba(255,255,255,.05);
-backdrop-filter:blur(12px);
+.hero{
+margin:20px;
+padding:25px;
+border-radius:24px;
+background:linear-gradient(135deg,#1e293b,#111827);
 border:1px solid rgba(255,255,255,.08);
-padding:20px;
-border-radius:20px;
+box-shadow:0 0 40px rgba(251,191,36,.08);
+}
+
+.badge{
+display:inline-block;
+padding:8px 14px;
+background:rgba(251,191,36,.15);
+color:#fbbf24;
+border-radius:999px;
+font-size:12px;
 margin-bottom:15px;
+}
+
+.hero h2{
+font-size:26px;
+margin-bottom:12px;
+}
+
+.hero p{
+color:#cbd5e1;
+line-height:1.7;
+}
+
+.main-btn{
+display:block;
+text-decoration:none;
+text-align:center;
+margin-top:20px;
+padding:16px;
+border-radius:16px;
+font-weight:bold;
+background:linear-gradient(135deg,#fbbf24,#f59e0b);
+color:#111;
+}
+
+.section{
+padding:20px;
 }
 
 .stats{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:12px;
-margin-top:15px;
 }
 
-.stat{
+.card{
 background:rgba(255,255,255,.05);
-padding:15px;
-border-radius:16px;
-text-align:center;
-}
-
-.stat h2{
-font-size:22px;
-margin-bottom:5px;
-}
-
-.btn{
-display:block;
-width:100%;
-padding:16px;
-border-radius:16px;
-text-align:center;
-text-decoration:none;
-font-weight:bold;
-background:linear-gradient(135deg,#2563eb,#7c3aed);
-color:white;
-box-shadow:0 0 25px rgba(99,102,241,.4);
-margin-top:15px;
-}
-
-.bottom{
-position:fixed;
-bottom:0;
-left:0;
-right:0;
-background:rgba(15,23,42,.95);
+border:1px solid rgba(255,255,255,.08);
 backdrop-filter:blur(10px);
-display:flex;
-justify-content:space-around;
-padding:15px;
-border-top:1px solid rgba(255,255,255,.08);
+padding:18px;
+border-radius:18px;
 }
 
-.bottom button{
-background:none;
-border:none;
-color:white;
-font-size:14px;
+.card h3{
+font-size:24px;
+margin-bottom:6px;
+}
+
+.card p{
+color:#94a3b8;
+}
+
+.menu-card{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+padding:18px;
+border-radius:18px;
+margin-top:14px;
+}
+
+.menu-card h4{
+margin-bottom:6px;
 }
 
 .tab{
@@ -127,6 +144,29 @@ display:none;
 display:block;
 }
 
+.bottom{
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+background:#0f172a;
+border-top:1px solid rgba(255,255,255,.08);
+display:flex;
+justify-content:space-around;
+padding:14px;
+}
+
+.bottom button{
+background:none;
+border:none;
+color:white;
+font-size:13px;
+}
+
+.gold{
+color:#fbbf24;
+}
+
 </style>
 </head>
 
@@ -134,14 +174,14 @@ display:block;
 
 <div class="header">
 
-<div class="logo-box">
+<div class="brand">
 
 <div class="logo">
 SN
 </div>
 
 <div>
-<h1>SalarNexa</h1>
+<h1>SALARNEXA</h1>
 <p>Digital Advertising Ecosystem</p>
 </div>
 
@@ -149,91 +189,145 @@ SN
 
 </div>
 
-<div id="home" class="page tab active">
+<div id="home" class="tab active">
 
-<div class="card">
-<h3>Welcome Back</h3>
-<p>Professional Digital Advertising Platform</p>
+<div class="hero">
+
+<div class="badge">
+PREMIUM PLATFORM
 </div>
+
+<h2>
+The Future Of Digital Advertising
+</h2>
+
+<p>
+SalarNexa is a next generation digital ecosystem designed for advertising engagement, smart growth and referral networking.
+</p>
+
+<a href="#" class="main-btn">
+🚀 START EARNING
+</a>
+
+</div>
+
+<div class="section">
 
 <div class="stats">
 
-<div class="stat">
-<h2>$0.00</h2>
+<div class="card">
+<h3>$0.00</h3>
 <p>Balance</p>
 </div>
 
-<div class="stat">
-<h2>0</h2>
+<div class="card">
+<h3>0</h3>
 <p>Ads Watched</p>
 </div>
 
-<div class="stat">
-<h2>0</h2>
+<div class="card">
+<h3>0</h3>
 <p>Referrals</p>
 </div>
 
-<div class="stat">
-<h2>🔒</h2>
+<div class="card">
+<h3>0</h3>
 <p>Rewards</p>
 </div>
 
 </div>
 
-<a href="#" class="btn">
-📺 Watch Advertisements
+</div>
+
+</div>
+
+<div id="ads" class="tab">
+
+<div class="section">
+
+<div class="hero">
+
+<div class="badge">
+ADS CENTER
+</div>
+
+<h2>
+Watch Advertisements
+</h2>
+
+<p>
+View available advertising campaigns and receive rewards through platform participation.
+</p>
+
+<a href="#" class="main-btn">
+📺 WATCH ADS
 </a>
 
 </div>
 
-<div id="ads" class="page tab">
-
-<div class="card">
-<h3>Advertising Center</h3>
-<p>Watch available advertisements and earn rewards.</p>
-
-<a href="#" class="btn">
-Start Watching
-</a>
-
 </div>
 
 </div>
 
-<div id="referral" class="page tab">
+<div id="referral" class="tab">
 
-<div class="card">
+<div class="section">
 
-<h3>Referral Program</h3>
+<div class="hero">
 
-<p>Invited Users: 0</p>
-<p>Target: 5 Users</p>
+<div class="badge">
+REFERRAL NETWORK
+</div>
+
+<h2>
+Grow Your Network
+</h2>
+
+<p>
+Invite users and expand your referral community through the SalarNexa ecosystem.
+</p>
 
 <br>
 
-<p>Your Referral Link:</p>
-
-<p>
-t.me/SalarNexaBot?start=12345
+<p class="gold">
+https://t.me/SalarNexaBot?start=12345
 </p>
 
-<a href="#" class="btn">
-Share Referral Link
+<a href="#" class="main-btn">
+👥 SHARE LINK
 </a>
 
 </div>
 
 </div>
 
-<div id="profile" class="page tab">
+</div>
 
-<div class="card">
+<div id="profile" class="tab">
 
-<h3>Profile</h3>
+<div class="section">
 
-<p>Username: Guest</p>
-<p>User ID: 000000</p>
-<p>Status: Active</p>
+<div class="hero">
+
+<div class="badge">
+ACCOUNT
+</div>
+
+<h2>
+User Profile
+</h2>
+
+<p>Username : Guest</p>
+<p>User ID : 000000</p>
+<p>Status : Active</p>
+
+<br>
+
+<a href="#" class="main-btn">
+⚙️ ACCOUNT SETTINGS
+</a>
+
+</div>
 
 </div>
 
@@ -250,7 +344,7 @@ Share Referral Link
 </button>
 
 <button onclick="showTab('referral')">
-👥 Referral
+👥 Network
 </button>
 
 <button onclick="showTab('profile')">
@@ -263,7 +357,7 @@ Share Referral Link
 
 function showTab(tab){
 
-document.querySelectorAll('.tab').forEach(item=>{
+document.querySelectorAll('.tab').forEach(function(item){
 item.classList.remove('active');
 });
 
